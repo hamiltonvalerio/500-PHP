@@ -1,4 +1,10 @@
 <?php 
+	
+$var = true;
+
+do {
+	# code...
+
 	echo '----------';
 	echo "\n";
 	echo '-0 - Soma-';
@@ -8,6 +14,8 @@
 	echo '-2 - Mult-';
 	echo "\n";
 	echo '-3 - Divi-';
+	echo "\n";
+	echo '-5 - SAIR-';
 	echo "\n";
 	$opcao = readline('Escolha uma opcao: ');
 
@@ -36,14 +44,14 @@
 			echo 'Divi: '.($num1/$num2);
 			echo "\n";
 			break;
+		case 5:
+			$var = false;
+			break;
 		default:
 			echo 'errou';
 			echo "\n";
 			break;
 	}
-
-	//---------------------
-
-	
+} while ($var);
 
  ?>
