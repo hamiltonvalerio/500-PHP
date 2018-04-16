@@ -1,9 +1,11 @@
 <?php 
 	
-	echo "Ola PHP CLI \n";
+	$nome = readline('Digite seu nome: ');
 
-	$nome = readline('Digite seu nome:');
-
-	echo "Ola, $nome\n";
+	if($nome == 'Adriano'){
+		
+		echo 'Juruna';
+		echo "\n";
+	}
 
  ?>
