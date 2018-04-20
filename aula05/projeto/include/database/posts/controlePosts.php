@@ -1,11 +1,10 @@
 <?php 
-	if(!empty($_GET)){
-	deletarPost($_GET['deletar']);
-	}
-	
-
 	include_once dirname(__DIR__) . '/funcoesBanco.php';
 
+
+	if(!empty($_GET)){
+		deletarPost($_GET['deletarpost']);
+	}
 	function buscarPosts(){
 		$array = [
     				0 => ['titulo' => '', 'texto' => '', 'nome' => '', 'id' => '']
@@ -31,9 +30,13 @@
 		direcionaIndex();
 	}
 
-	function deletarPost($dados){
-		$id = 'id ='.$dados;
-		deletar('posts', $id);
+	function deletarPost(string $dados){
+		$id = 'id = '.$dados;
+
+		//echo $id;
+		//die();
+
+		deletarPorId('posts', $id);
 		direcionaIndex();
 	}
 

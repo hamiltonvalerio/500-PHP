@@ -83,7 +83,7 @@
 						<?php if(validaUsuario($post['usuid'])) :?>
 							<a href="">Alterar </a>
 							||
-							<a href="../include/database/posts/controlePosts.php?deletar=<?= $post['id'] ?>"> Excluir</a>	
+							<a href="../include/database/posts/controlePosts.php?deletarpost=<?= $post['id'] ?>"> Excluir</a>	
 						<?php endif; ?>
 
 					</td>

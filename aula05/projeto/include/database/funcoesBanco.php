@@ -33,11 +33,9 @@
 	}
 
 
-	function deletar(string $tabela, string $onde)
+	function deletarPorId(string $tabela, string $onde)
 	{
 		$query = "DELETE FROM {$tabela} WHERE {$onde}";
-		echo $query;
-		die();
 		$con = conectar();
 		pg_query($con,$query);
 	}
