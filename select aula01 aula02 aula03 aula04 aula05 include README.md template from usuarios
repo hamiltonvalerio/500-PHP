@@ -1,0 +1,12 @@
+                                    Tabela "public.usuarios"
+ Coluna |          Tipo          |                         Modificadores                         
+--------+------------------------+---------------------------------------------------------------
+ id     | integer                | não nulo valor padrão de nextval('usuarios_id_seq'::regclass)
+ nome   | character varying(150) | não nulo
+ email  | character varying(150) | não nulo
+ senha  | character varying(15)  | não nulo
+Índices:
+    "usuarios_pkey" PRIMARY KEY, btree (id)
+Referenciada por:
+    TABLE "posts" CONSTRAINT "posts_id_usuario_fkey" FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+
